@@ -31,7 +31,6 @@ create table wei_tbl(
     source_from varchar(64) not null,
     content text not null
     ) default charset=utf8;
-   # alter table `wei_tbl` add primary key(`id`);
    
    
 # 启动程序
