@@ -1,0 +1,28 @@
+# 1. 批量处理请求头字段格式
+"Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+"Accept-Encoding": "gzip, deflate, br",
+"Accept-Language": "en,en-US;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+"Connection": "keep-alive",
+"Cookie": "69435e735442d29d641bac0c80e1; sct=4",
+"Host": "weixin.sogou.com",
+"Referer": "https://weixin.sogou.com/weixin?query=python&_sug_type_=&sut=2028&lkt=7%2C1587201134473%2C1587201136528&s_from=input&_sug_=y&type=2&sst0=1587201136632&page=12&ie=utf8&w=01019900&dr=1",
+"Sec-Fetch-Dest": "document",
+"Sec-Fetch-Mode": "navigate",
+"Sec-Fetch-Site": "same-origin",
+"Sec-Fetch-User": "?1",
+"Upgrade-Insecure-Requests": "1",
+"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
+
+# 2. mysql数据库创建
+create database wei_chat default charset="utf8";
+
+# 3. 数据表创建
+create table wei_tbl(
+    id unsigned int auto_increment primary key not null,
+    title varchar(255) not null,
+    category varchar(255) not null,
+    source_from varchar(64) not null,
+    content text not null
+    ) default charset=utf8;
+   # alter table `wei_tbl` add primary key(`id`);
+
